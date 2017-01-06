@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=rofi
+GenericName=autostart for rofi
+Comment=Nada
+Exec=rofi -key-run F2 -bw 1 -font "Misc Tamsyn 10" -bg "#aaaaaa" -bc "#ffff00" -hlbg "#ffff00" -hlfg "#000000" &
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

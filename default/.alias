@@ -1,0 +1,6 @@
+# User defined aliases
+alias e="emacs -nw -q -l ~/.emacs.d/init.el"
+alias v="vim"
+alias h="history"
+alias l="ls -l --color=auto"
+alias la="ls -la --color=auto"

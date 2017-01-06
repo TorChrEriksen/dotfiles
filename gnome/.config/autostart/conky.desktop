@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=conky
+GenericName=autostart for conky
+Comment=Nada
+#Exec=conky -d -c <path to homedir, not ~>/.config/conky/conky.conf
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
