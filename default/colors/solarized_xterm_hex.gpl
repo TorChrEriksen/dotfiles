@@ -1,0 +1,20 @@
+GIMP Palette
+Name: solarized_xterm_hex.gpl
+Columns: 1
+#
+28	28	28	base03
+38	38	38	base02
+88	88	88	base01
+98	98	98	base00
+128	128	128	base0
+138	138	138	base1
+228	228	228	base2
+255	255	215	base3
+175	135	0	yellow
+215	95	0	orange
+215	0	0	red
+175	0	95	magenta
+95	95	175	violet
+0	135	255	blue
+0	175	175	cyan
+95	135	0	green

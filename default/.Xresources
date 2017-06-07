@@ -6,41 +6,53 @@
 !
 ! http://ethanschoonover.com/solarized
 
+!===============================================================================
+! Common color stuff
+! colors 0-7 are normal colours
+! colors 8-15 are bright counterparts
+
 
 ! Common
 
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+#define yellow        #b58900
+#define orange        #cb4b16
+#define red           #dc322f
+#define magenta       #d33682
+#define violet        #6c71c4
+#define blue          #268bd2
+#define cyan          #2aa198
+#define green         #859900
+
+! xterm
+! #define yellow        #af8700
+! #define orange        #d75f00
+! #define red           #d70000
+! #define magenta       #af005f
+! #define violet        #5f5faf
+! #define blue          #0087ff
+! #define cyan          #00afaf
+! #define green         #5f8700
 
 
-! Dark
+! Dark (base1 can be used as a 5th for optional emphasized content)
+! base03 background
+! base02 background_highlights
+! base01 comments/secondary content
+! base0  body text/default code/primary content
+#define base03        #002b36
+#define base02        #073642
+#define base01        #586e75
+#define base0         #839496
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-
-! Light
-
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
+! Light (base01 can be used as a 5th for optional emphasized content)
+! base3  background
+! base2  background_highlights
+! base1  comments/secondary content
+! base00 body text/default content/primary content
+#define base3         #fdf6e3
+#define base2         #eee8d5
+#define base1         #93a1a1
+#define base00        #657b83
 
 
 ! To only apply colors to your terminal, for example, prefix
@@ -48,30 +60,44 @@
 !
 ! URxvt*background:            S_base03
 
-*background:              S_base03
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+!dark
+*background:              base03
+*foreground:              base0
+*cursorColor:             base1
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+!light
+! *background:              base3
+! *foreground:              base00
+! *cursorColor:             base01
+
+! *fading:                  40
+*fadeColor:               base03
+! *pointerColorBackground:  base01
+! *pointerColorForeground:  base1
+
+! color1 = archive
+! color2 = executable
+! color12 = dir
+! color13 = socket
+
+! *color0:                  base02
+*color1:                  red
+*color2:                  green
+! *color3:                  yellow
+! *color4:                  blue
+! *color5:                  magenta
+! *color6:                  cyan
+! *color7:                  base2
+! *color9:                  orange
+! *color8:                  base03
+*color10:                 red
+*color11:                 yellow
+! *color10:                 base01
+! *color11:                 base00
+*color12:                 blue
+*color13:                 violet
+! *color14:                 base1
+! *color15:                 base3
 !===============================================================================
 
 ! URxvt*scrollTtyOutput: false
