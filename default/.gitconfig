@@ -1,6 +1,8 @@
 [user]
   name =
   email =
+[core]
+  whitespace = tab-in-indent
 [color "diff"]
   whitespace = red reverse
 [color]
@@ -13,7 +15,7 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  hist = log --graph --pretty=format:\"%C(yellow)%h %C(green)%ad %C(red)%<(25)%an %Creset%s%d \" --date=short
   type = cat-file -t
   dump = cat-file -p
   cp = cherry-pick

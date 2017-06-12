@@ -59,16 +59,20 @@
 ! the color assignment statement with its name. Example:
 !
 ! URxvt*background:            S_base03
+!URxvt*borderColor: red
+!URxvt*internalBorder: 10
 
 !dark
-*background:              base03
-*foreground:              base0
-*cursorColor:             base1
+! *background:              base03
+! *foreground:              base0
+! *cursorColor:             base1
+! URxvt*scrollColor:        base1
 
 !light
-! *background:              base3
-! *foreground:              base00
-! *cursorColor:             base01
+*background:              base3
+*foreground:              base00
+*cursorColor:             base01
+URxvt*scrollColor:        base01
 
 ! *fading:                  40
 *fadeColor:               base03
@@ -100,9 +104,14 @@
 ! *color15:                 base3
 !===============================================================================
 
-! URxvt*scrollTtyOutput: false
-! URxvt*scrollWithBuffer: true
-! URxvt*scrollTtyKeypress: false
+URxvt*geometry: 100x30
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*scrollTtyKeypress: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
+URxvt*thickness: 1
+
 
 ! Urxvt.secondaryScreen: 1
 ! Urxvt.secondaryScroll: 0
