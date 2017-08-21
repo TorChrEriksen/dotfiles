@@ -1,6 +1,6 @@
 [user]
-  name =
-  email =
+  name = Tor-Christian Eriksen
+  email = torce@spacetec.no
 [core]
   whitespace = tab-in-indent
 [color "diff"]
@@ -22,3 +22,4 @@
   sh = show
   l = log
   rso = remote show origin
+  cbr = symbolic-ref HEAD
