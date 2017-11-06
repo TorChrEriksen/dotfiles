@@ -22,8 +22,11 @@ FAIL="[${RED}FAIL${NOC}]"
 
 function load_alias()
 {
-    if [[ -s $1 && $(. $1) -eq 0 ]]; then
-        echo -e "${OK} loading ${1}"
+    if [[ -s $1 ]]; then
+        . $1
+        if [[ $? -eq 0 ]]; then
+            echo -e "${OK} loading ${1}"
+        fi
     else
         echo -e "${FAIL} loading ${1}"
     fi
@@ -42,13 +45,6 @@ function tc_pwd()
 }
 
 # Prompt colouring
-# Ref: http://bitmote.com/index.php?post/2012/11/19/Using-ANSI-Color-Codes-to-Colorize-Your-Bash-Prompt-on-Linux
-
-
-# BACKGROUND="\[\033[1;30;43m\]"
-# CLEAR="\[\033[0m\]"
-# export PS1="$BACKGROUND\u@\h:\w>$CLEAR "
-
 PROMPT="${GREEN}\u@\h${NOC}:${YELLOW}\$(tc_pwd)${NOC} \$ ";
 NEXT_PROMPT="${PROMPT:0:-3}\n\$ "
 export PS1="$PROMPT"
@@ -57,21 +53,15 @@ export PS1="$PROMPT"
 export VISUAL="emacs -nw -q -l ~/.emacs.d/init.el"
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/firefox
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Enable gtk 3.X dark for terminal emulators
-# if [ "$TERM" == "xterm" ] ; then
-#   xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id `xprop -root | awk '/^_NET_ACTIVE_WINDOW/ {print $5}'`
-# fi
 
 # Set key F11 to us key layout
 bind -x '"\e[23~":"setxkbmap us"'
 
 # Set key F12 to no key layout
-bind -x '"\e[24~":"setxkbmap no"'
+# bind -x '"\e[24~":"setxkbmap no"'
 
 # Swap ctrl and caps
-setxkbmap -option ctrl:swapcaps
+# setxkbmap -option ctrl:swapcaps
 
 # emacs GUI function
 function ew
