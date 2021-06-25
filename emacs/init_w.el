@@ -5,6 +5,10 @@
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/emacs-color-theme-solarized/")
 ;; (load-theme 'solarized t)
 
+;; uncomment if you have Tamsyn installed
+(custom-set-faces
+ '(default ((t (:family "Tamsyn" :foundry "Misc" :slant normal :weight normal :height 134 :width normal)))))
+
 ;; Load MELPA
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
@@ -14,6 +18,11 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
+
+;; gruvbox theme
+;; (setq custom-safe-themes t)
+;; (add-hook 'after-init-hook (lambda() (load-theme 'gruvbox-dark-medium)))
+(load-theme 'gruvbox-dark-medium t)
 
 ;; no startup message, no menu bar, no toolbar, empty scratch buffer
 (setq inhibit-startup-message t)
